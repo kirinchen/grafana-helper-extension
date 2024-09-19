@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "Grafana Button Extension",
+  "version": "1.0",
+  "description": "Adds two buttons next to the time selection in Grafana dashboard.",
+  "permissions": ["activeTab", "scripting"],
+  "content_scripts": [
+    {
+      "matches": ["https://your-grafana-url.com/*"],
+      "js": ["content.js"],
+      "css": ["styles.css"]
+    }
+  ],
+  "host_permissions": ["https://your-grafana-url.com/*"],
+  "action": {
+    "default_popup": "popup.html"
+  }
+}
